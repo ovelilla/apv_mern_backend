@@ -5,7 +5,7 @@ const setCookie = (req, res) => {
         expires: new Date(Date.now() + 24 * 3600000),
         secure: true,
         httpOnly: true,
-        sameSite: 'Strict'
+        sameSite: 'None'
     }).send();
 }
 
