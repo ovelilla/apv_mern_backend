@@ -5,8 +5,8 @@ const setCookie = (req, res) => {
         expires: new Date(Date.now() + 24 * 3600000),
         secure: true,
         httpOnly: true,
-        sameSite: 'None',
-        domain: 'https://nervous-bohr-207037.netlify.app/'
+        sameSite: 'Strict',
+        domain: 'nervous-bohr-207037.netlify.app'
     }).send();
 }
 
