@@ -3,9 +3,11 @@ const setCookie = (req, res) => {
 
     res.cookie(name, value, {
         expires: new Date(Date.now() + 24 * 3600000),
+        sameSite: "none",
         secure: true,
-        httpOnly: true,
-        // sameSite: 'Strict'
+        // httpOnly: true,
+        // sameSite: "Strict",
+        // domain: process.env.FRONTEND_URL
     }).send();
 }
 
